@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mervin's Gaming Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .profile-container {
+            width: 500px;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: flex-start;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode .profile-container {
+            background-color: #333333;
+            border-color: #555555;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin-right: 20px;
+            text-align: center;
+            line-height: 150px;
+            color: #888;
+        }
+        .profile-info {
+            flex-grow: 1;
+        }
+        .profile-info strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .profile-info span {
+            display: block;
+            margin-bottom: 15px;
+        }
+        .dark-mode-toggle {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+        ☀️
+    </div>
+    <!-- Profile for Mervin -->
+    <div class="profile-container">
+        <div class="profile-picture">
+            Profile Picture
+        </div>
+        <div class="profile-info">
+            <strong>Full Name:</strong>
+            <span id="full-name-mervin">Mervin Masel Mouse</span>
+            <strong>House Address:</strong>
+            <span id="house-address-mervin">Mousehole</span>
+            <strong>Birth Date:</strong>
+            <span id="birth-date-mervin">N/A</span>
+            <strong>Username:</strong>
+            <span id="username-mervin">N/A</span>
+            <strong>Password:</strong>
+            <span id="password-mervin">N/A</span>
+            <strong>Pet's Name:</strong>
+            <span id="pet-name-mervin">Carl the Caterpillar</span>
+            <strong>Favorite Food:</strong>
+            <span id="favorite-food-mervin">Cheese</span>
+            <strong>Favorite Hobby:</strong>
+            <span id="favorite-hobby-mervin">N/A</span>
+            <strong>Secret Shared:</strong>
+            <span id="secret-mervin">My brother and I fight all the time.</span>
+        </div>
+    </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const toggleIcon = document.querySelector('.dark-mode-toggle');
+            if (document.body.classList.contains('dark-mode')) {
+                toggleIcon.textContent = '🌜'; // Moon icon
+            } else {
+                toggleIcon.textContent = '☀️'; // Sun icon
+            }
+        }
+    </script>
+</body>
+</html>
