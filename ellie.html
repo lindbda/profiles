@@ -30,18 +30,14 @@
             background-color: #333333;
             border-color: #555555;
         }
-        .profile-picture {
+        .profile-picture img {
             width: 150px;
             height: 150px;
-            background-color: #e0e0e0;
             border-radius: 10px;
-            margin-right: 20px;
-            text-align: center;
-            line-height: 150px;
-            color: #888;
         }
         .profile-info {
             flex-grow: 1;
+            margin-left: 20px;
         }
         .profile-info strong {
             display: block;
@@ -64,10 +60,12 @@
     <div class="dark-mode-toggle" onclick="toggleDarkMode()">
         ☀️
     </div>
+
     <!-- Profile for Ellie -->
-    <div class="profile-picture">
-    <img src="./Ellie.png" alt="Ellie Profile Picture" style="width: 150px; height: 150px; border-radius: 10px;">
-    </div>
+    <div class="profile-container">
+        <div class="profile-picture">
+            <img src="./Ellie.png" alt="Ellie Profile Picture">
+        </div>
         <div class="profile-info">
             <strong>Full Name:</strong>
             <span id="full-name-ellie">Ellie Electra Elephant</span>
@@ -89,6 +87,7 @@
             <span id="secret-ellie">N/A</span>
         </div>
     </div>
+
     <script>
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
